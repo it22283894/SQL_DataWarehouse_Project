@@ -1,0 +1,670 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{08BC4BB8-D0FE-453C-A52C-8B502A342EDE}" Name="Brand">
+      <DtsConnectionManagerID>Brand</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4E4692C1-C85C-4E09-AD26-E98731B37F77}" Name="Campaign">
+      <DtsConnectionManagerID>Campaign</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{34853D76-322E-43E2-83F8-3B9376DEC000}" Name="Category">
+      <DtsConnectionManagerID>Category</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D4563EAC-45AD-4A00-AFCC-1004364CCB51}" Name="CouponRedemption">
+      <DtsConnectionManagerID>CouponRedemption</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{91087F7E-BD14-42BA-8FB5-9DBB8152BDF5}" Name="CouponRedemption 1">
+      <DtsConnectionManagerID>CouponRedemption 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4358BB7C-BF16-4EEF-8B9F-8DE5EA547E2C}" Name="CustomerAddress">
+      <DtsConnectionManagerID>CustomerAddress</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{490C696D-00F0-4752-8328-62D2E1687EB4}" Name="CustomerInfo">
+      <DtsConnectionManagerID>CustomerInfo</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{96037430-4A07-4726-B093-95FCFB878C63}" Name="CustomerTransactions">
+      <DtsConnectionManagerID>CustomerTransactions</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{995C2870-48CA-430D-8DFC-F842A3949525}" Name="DAKSHINA\SQLEXPRESS02.Coupon_Staging">
+      <DtsConnectionManagerID>DAKSHINA\SQLEXPRESS02.Coupon_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{06D6CCDC-47B3-493B-9536-F24E5262E03C}" Name="DAKSHINA\SQLEXPRESS02.Coupon_Staging1">
+      <DtsConnectionManagerID>DAKSHINA\SQLEXPRESS02.Coupon_Staging1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AD1B5C12-FF9C-4141-AB23-478BE43C74D6}" Name="DAKSHINA\SQLEXPRESS02.Stg_Campaign">
+      <DtsConnectionManagerID>DAKSHINA\SQLEXPRESS02.Stg_Campaign</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9EEC1EE9-122B-478A-8DFF-9EFB53117F79}" Name="Items">
+      <DtsConnectionManagerID>Items</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D43EC4B7-80D9-4C63-B52C-B6F17AE5DCE7}" Name="DAKSHINA_SQLEXPRESS02.Coupon_Staging">
+      <DtsConnectionManagerID>DAKSHINA_SQLEXPRESS02.Coupon_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_Items" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_Items" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_Items" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_Items" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_Items" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ItemID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ItemName" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="BrandID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ModifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>337</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ModifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2012-07-11T00:00:00.0000000</MinValue>
+        <MaxValue>2013-07-11T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ItemID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>3999</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ItemName" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>8</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>90</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>900</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>3000</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="BrandID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>3999</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <KeyColumns>
+          <Column Name="ItemID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ItemID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3999</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <KeyColumns>
+          <Column Name="ItemName" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ItemName" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>3999</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="BrandID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>467</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>BT0446</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0714</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0639</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0982</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0278</Value>
+            <Count>45</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1124</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1958</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1027</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2054</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1803</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0829</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0316</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0124</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0147</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0350</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0172</Value>
+            <Count>29</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0771</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1000</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1183</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2320</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0209</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2088</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0619</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0119</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0363</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0782</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1101</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1337</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0101</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0212</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2024</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0986</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0574</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0951</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1193</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0162</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0522</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0602</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0360</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1636</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0406</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0408</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0676</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1016</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT4467</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0634</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0280</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0011</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1300</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0544</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0158</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0461</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT4484</Value>
+            <Count>618</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1294</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0001</Value>
+            <Count>42</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0482</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1075</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1569</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1013</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1235</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0702</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0984</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1487</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0152</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0823</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1134</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0501</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0057</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0487</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0387</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0400</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0681</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1665</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1298</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2025</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1145</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0115</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1996</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0939</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1088</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1587</Value>
+            <Count>141</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0548</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0524</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1216</Value>
+            <Count>374</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1061</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0757</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1105</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0997</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1144</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1025</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0686</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0971</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0369</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0475</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0412</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1558</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2209</Value>
+            <Count>240</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0089</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT2011</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0803</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0967</Value>
+            <Count>504</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1381</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0946</Value>
+            <Count>34</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0141</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0989</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT1143</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0133</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BT0056</Value>
+            <Count>589</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_Items" RowCount="3999" />
+        <Column Name="ModifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2012-09-01T00:00:00.0000000</Value>
+            <Count>751</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-07-11T00:00:00.0000000</Value>
+            <Count>625</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-06-10T00:00:00.0000000</Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-07-11T00:00:00.0000000</Value>
+            <Count>2218</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>

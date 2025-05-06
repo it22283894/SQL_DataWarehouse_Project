@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{08BC4BB8-D0FE-453C-A52C-8B502A342EDE}" Name="Brand">
+      <DtsConnectionManagerID>Brand</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4E4692C1-C85C-4E09-AD26-E98731B37F77}" Name="Campaign">
+      <DtsConnectionManagerID>Campaign</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{34853D76-322E-43E2-83F8-3B9376DEC000}" Name="Category">
+      <DtsConnectionManagerID>Category</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D4563EAC-45AD-4A00-AFCC-1004364CCB51}" Name="CouponRedemption">
+      <DtsConnectionManagerID>CouponRedemption</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{91087F7E-BD14-42BA-8FB5-9DBB8152BDF5}" Name="CouponRedemption 1">
+      <DtsConnectionManagerID>CouponRedemption 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4358BB7C-BF16-4EEF-8B9F-8DE5EA547E2C}" Name="CustomerAddress">
+      <DtsConnectionManagerID>CustomerAddress</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{490C696D-00F0-4752-8328-62D2E1687EB4}" Name="CustomerInfo">
+      <DtsConnectionManagerID>CustomerInfo</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{96037430-4A07-4726-B093-95FCFB878C63}" Name="CustomerTransactions">
+      <DtsConnectionManagerID>CustomerTransactions</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{995C2870-48CA-430D-8DFC-F842A3949525}" Name="DAKSHINA\SQLEXPRESS02.Coupon_Staging">
+      <DtsConnectionManagerID>DAKSHINA\SQLEXPRESS02.Coupon_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{06D6CCDC-47B3-493B-9536-F24E5262E03C}" Name="DAKSHINA\SQLEXPRESS02.Coupon_Staging1">
+      <DtsConnectionManagerID>DAKSHINA\SQLEXPRESS02.Coupon_Staging1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AD1B5C12-FF9C-4141-AB23-478BE43C74D6}" Name="DAKSHINA\SQLEXPRESS02.Stg_Campaign">
+      <DtsConnectionManagerID>DAKSHINA\SQLEXPRESS02.Stg_Campaign</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{9EEC1EE9-122B-478A-8DFF-9EFB53117F79}" Name="Items">
+      <DtsConnectionManagerID>Items</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{D43EC4B7-80D9-4C63-B52C-B6F17AE5DCE7}" Name="DAKSHINA_SQLEXPRESS02.Coupon_Staging">
+      <DtsConnectionManagerID>DAKSHINA_SQLEXPRESS02.Coupon_Staging</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table Schema="dbo" Table="Stg_ProductBrand" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>1211</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnStatisticsProfile IsExact="true" ProfileRequestID="StatisticsReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <MinValue>2012-04-13T00:00:00.0000000</MinValue>
+        <MaxValue>2013-09-17T00:00:00.0000000</MaxValue>
+      </ColumnStatisticsProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>6</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>4499</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>11</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>2091</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>2408</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>4497</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <KeyColumns>
+          <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_ID" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4499</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="Brand_type" SqlDbType="VarChar" MaxLength="20" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Established</Value>
+            <Count>2408</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Local</Value>
+            <Count>2091</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="CategoryID" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>CAT0002</Value>
+            <Count>525</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0007</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0006</Value>
+            <Count>1008</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0005</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0004</Value>
+            <Count>108</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0003</Value>
+            <Count>1148</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0010</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0001</Value>
+            <Count>1646</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAT0009</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{995C2870-48CA-430D-8DFC-F842A3949525}</DataSourceID>
+        <Table DataSource="DAKSHINA\SQLEXPRESS02" Database="Coupon_Staging" Schema="dbo" Table="Stg_ProductBrand" RowCount="4499" />
+        <Column Name="modifiedDate" SqlDbType="Date" MaxLength="0" Precision="255" Scale="255" LCID="-1" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>5</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>2013-09-17T00:00:00.0000000</Value>
+            <Count>554</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-07-11T00:00:00.0000000</Value>
+            <Count>1315</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-06-11T00:00:00.0000000</Value>
+            <Count>1032</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2013-04-17T00:00:00.0000000</Value>
+            <Count>314</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2012-04-13T00:00:00.0000000</Value>
+            <Count>73</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
