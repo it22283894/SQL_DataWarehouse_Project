@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DAKSHINA_SQLEXPRESS02.Coupon_Staging"
+  DTS:DTSID="{D43EC4B7-80D9-4C63-B52C-B6F17AE5DCE7}"
+  DTS:CreationName="ADO">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DAKSHINA\SQLEXPRESS02;Initial Catalog=Coupon_Staging;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-DWBI_Assignment_SSIS-{D43EC4B7-80D9-4C63-B52C-B6F17AE5DCE7}DAKSHINA\SQLEXPRESS02.Coupon_Staging;Auto Translate=False;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
